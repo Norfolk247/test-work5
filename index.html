@@ -1,16 +1,24 @@
 <html lang="ru">
     <head>
         <title>maket</title>
-        <meta charset="utf-8">
+        <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
         <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+        <style>
+            body {
+                font-family: 'Roboto',serif;
+            }
+        </style>
     </head>
     <body class="m-0" style="background: #F8FAFF; color: #7D7D7D">
+        <div id="lock-window" class="w-100 h-100 position-absolute" style="z-index: 1;top: 0;left: 0;display: none"></div>
         <!--menu-->
         <div class="menu-btn position-absolute">
-            <img src="logo_work5_fb_and_twitter_1200x630.png" alt="" style="margin-left: 2%;width: 8%;height: auto">
+            <img id="menu-btn" src="logo_work5_fb_and_twitter_1200x630.png" alt="" style="margin-left: 20%;width: 150px;height: auto">
         </div>
-        <div class="position-absolute h-100 bg-white menu" style="font-family: 'Roboto';font-size: 16px">
+        <div id="menu" class="position-absolute h-100 bg-white menu" style="font-size: 16px">
             <!--icon-->
             <img src="logo_work5_fb_and_twitter_1200x630.png" alt="" style="max-width: 30%;height: auto;margin: 10% 0 10% 20%">
             <!--главная-->
@@ -142,30 +150,30 @@
             </div>
         </div>
         <!--header-->
-        <div class="position-absolute top-0 header-btn" style="width: 40px;height: auto;margin: 2%;right: 0">
+        <div id="header-btn" class="position-absolute top-0 header-btn" style="width: 40px;height: auto;margin: 2%;right: 0">
             <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">
                 <path fill-rule="evenodd" d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"/>
             </svg>
         </div>
-        <div class="position-absolute row header" style="top:2%;height: 6vh; right: 0">
+        <div class="position-absolute row header" style="top:2%;height: 50px; right: 0">
             <!--message-->
-            <div class="col-md-8 bg-white rounded-3 d-flex justify-content-center" style="cursor: pointer;border: 1px solid #D9D9D9;width: 6vh;height: 6vh;margin-right: 2vh">
+            <div class="col-md-2 bg-white rounded-3 d-flex justify-content-center msg">
                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-envelope" viewBox="0 0 16 16">
                     <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4Zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1H2Zm13 2.383-4.708 2.825L15 11.105V5.383Zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741ZM1 11.105l4.708-2.897L1 5.383v5.722Z"/>
                 </svg>
             </div>
             <!--profile-->
-            <div class="col-md-2 bg-white rounded-3 row d-flex justify-content-center align-items-center shadow-sm " style="height: 6vh; width: 28vh; font-family: 'Roboto'; font-size: 16px">
+            <div class="col-md-10 bg-white rounded-3 row d-flex justify-content-center align-items-center shadow-sm profile">
                 <!--photo-->
-                <div class="rounded-circle col-md-1" style="border: 1px solid #D9D9D9;width: 5vh;height: 5vh">
-                    <img src="photo.png" alt="" class="object-fit-cover overflow-hidden rounded-circle position-relative top-0" style="right: 1.4vh;width: 5vh;height: 5vh">
+                <div class="rounded-circle col-md-1" style="border: 1px solid #D9D9D9;width: 45px;height: 45px">
+                    <img src="photo.png" alt="" class="object-fit-cover overflow-hidden rounded-circle position-relative top-0" style="right: 12px;width: 45px;height: 45px">
                 </div>
                 <!--text-->
-                <div class="col-md-2" style="width: 20vh">Максим Добжанский</div>
+                <div class="col-md-8 text-profile">Максим Добжанский</div>
             </div>
         </div>
         <!--crumbs-->
-        <div class="position-absolute crumbs" style="left: 25%;top: 2%;font-family: 'Roboto Light',serif; font-size: 14px">
+        <div class="position-absolute crumbs" style="left: 25%;top: 2%;font-size: 14px">
             <a>Главная</a>
             >
             <a>Мои магазины</a>
@@ -175,27 +183,27 @@
             <button id="create-shop-btn" class="text-white rounded-1 border-0 p-2" style="background: #55C97B;font-size: 14px">+ Создать свой магазин</button>
             <div class="text-black m-0 mt-4 mb-4" style="font-weight: bold;font-size: 22px;">Управление магазинами</div>
             <!--table-->
-            <div class="bg-white p-4 shadow w-100">
+            <div class="bg-white p-4 shadow main-app">
                 <!--title-->
-                <div class="row text-black align-items-center" style="height: 3%;font-weight: bold">
+                <div class="row text-black align-items-center" style="height: 40px;font-weight: bold">
                     <div class="col-1 ">№</div>
                     <div class="col-3 ">Название</div>
                     <div class="col-3 ">Адрес</div>
-                    <div class="col-5">Действие</div>
+                    <div class="col-5 action">Действие</div>
                 </div>
                 <!--middle-->
-                <div class="row align-items-center" style="height: 7%;border-bottom: 1px solid rgba(125,125,125,0.3);">
-                    <div class="col-1">12345</div>
-                    <div class="col-3">Дипломная работа</div>
-                    <div class="col-3" style="cursor: pointer">http://www.work5.ru/services</div>
-                    <div class="col-5 row text-white">
+                <div class="row align-items-center" style="height: 100px;border-bottom: 1px solid rgba(125,125,125,0.3);">
+                    <div class="col-1 overflow-hidden" style="text-overflow: ellipsis">12345</div>
+                    <div class="col-3 overflow-hidden" style="text-overflow: ellipsis">Дипломная работа</div>
+                    <div class="col-3 overflow-hidden" style="text-overflow: ellipsis;cursor: pointer">http://www.work5.ru/services</div>
+                    <div class="col-5 row text-white action">
                         <div class="col row m-2 align-items-center p-1 rounded d-flex justify-content-center store-btn" style="height: 35px;cursor: pointer;background: #55C97B">
                             <div class="col p-0 table-btn icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
                                     <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
                                 </svg>
                             </div>
-                            <div class="col-8 p-0">Редактировать</div>
+                            <div class="col-8 p-0 table-text">Редактировать</div>
                         </div>
                         <div class="col row m-2 align-items-center p-1 rounded d-flex justify-content-center store-btn" style="height: 35px;cursor: pointer;background: #B1B1B1">
                             <div class="col p-0 icon">
@@ -204,23 +212,23 @@
                                     <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
                                 </svg>
                             </div>
-                            <div class="col-8 p-0">Редактировать</div>
+                            <div class="col-8 p-0 table-text">Редактировать</div>
                         </div>
                     </div>
                 </div>
                 <!--bottom-->
-                <div class="row align-items-center" style="height: 7%">
-                    <div class="col-1">12345</div>
-                    <div class="col-3">Дипломная работа</div>
-                    <div class="col-3" style="cursor: pointer">http://www.work5.ru/services</div>
-                    <div class="col-5 row text-white">
+                <div class="row align-items-center" style="height: 100px">
+                    <div class="col-1 overflow-hidden" style="text-overflow: ellipsis">12345</div>
+                    <div class="col-3 overflow-hidden" style="text-overflow: ellipsis">Дипломная работа</div>
+                    <div class="col-3 overflow-hidden" style="text-overflow: ellipsis;cursor: pointer">http://www.work5.ru/services</div>
+                    <div class="col-5 row text-white action">
                         <div class="col row m-2 align-items-center p-1 rounded d-flex justify-content-center store-btn" style="cursor: pointer;background: #55C97B;height: 35px">
                             <div class="col p-0 icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" fill="currentColor" class="bi bi-pencil" viewBox="0 0 16 16">
                                     <path d="M12.146.146a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1 0 .708l-10 10a.5.5 0 0 1-.168.11l-5 2a.5.5 0 0 1-.65-.65l2-5a.5.5 0 0 1 .11-.168l10-10zM11.207 2.5 13.5 4.793 14.793 3.5 12.5 1.207 11.207 2.5zm1.586 3L10.5 3.207 4 9.707V10h.5a.5.5 0 0 1 .5.5v.5h.5a.5.5 0 0 1 .5.5v.5h.293l6.5-6.5zm-9.761 5.175-.106.106-1.528 3.821 3.821-1.528.106-.106A.5.5 0 0 1 5 12.5V12h-.5a.5.5 0 0 1-.5-.5V11h-.5a.5.5 0 0 1-.468-.325z"/>
                                 </svg>
                             </div>
-                            <div class="col-8 p-0">Редактировать</div>
+                            <div class="col-8 p-0 table-text">Редактировать</div>
                         </div>
                         <div class="col row m-2 align-items-center p-1 rounded d-flex justify-content-center store-btn" style="cursor: pointer;background: #B1B1B1;height: 35px">
                             <div class="col p-0 icon">
@@ -229,50 +237,64 @@
                                     <path fill-rule="evenodd" d="M2.146 2.146a.5.5 0 0 0 0 .708l11 11a.5.5 0 0 0 .708-.708l-11-11a.5.5 0 0 0-.708 0Z"/>
                                 </svg>
                             </div>
-                            <div class="col-8 p-0">Редактировать</div>
+                            <div class="col-8 p-0 table-text">Редактировать</div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
         <!--modal-->
-        <div class="position-absolute w-50 bg-white rounded-4 shadow" style="visibility: hidden;padding: 1% 3%;top:20%; left: 25%;height: 60%">
+        <div id="modal-create-shop" class="position-absolute bg-white rounded-4 shadow popup" style="display: none">
+            <!--modal header-->
             <div class="row">
                 <div class="col-10 text-black m-0 mt-4 mb-4" style="font-weight: bold;font-size: 22px;">Создать магазин</div>
-                <div class="col text-black m-0 mt-4 mb-4 align-self-center" style="height: 20px; width: 20px; cursor: pointer">
+                <div id="close-btn1" class="col text-black m-0 mt-4 mb-4 align-self-center" style="height: 20px; width: 20px; cursor: pointer">
                     <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" fill="currentColor" class="bi bi-x-circle" viewBox="0 0 16 16">
                         <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
                         <path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
                     </svg>
                 </div>
             </div>
+            <!--dropdown-->
             <div class="w-100" style="height: 20%">
                 <div class="row align-self-center">
                     <div class="col text-black" style="font-size: 16px;font-weight: bold">Шаблон</div>
                     <div class="col text-black" style="font-size: 16px;font-weight: bold">Цветовая схема</div>
                 </div>
                 <div class="row" style="color: #7D7D7D">
-                    <div class="col">
-                        <label>
-                            <select name="Стандартный">
-                                <option value="std">Стандартный</option>
-                                <option value="123">123</option>
-                            </select>
-                        </label>
+                    <div class="col position-relative">
+                        <div class="dropdown">
+                            <button value="1" type="button" class="dropdown-toggle" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                Стандартный
+                            </button>
+                            <ul id="dropdownmenu1" class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton1">
+                                <li class="dropdown-item" value="0" style="cursor: default;">Стандартный</li>
+                                <li class="dropdown-item" value="1" style="cursor: default;">2</li>
+                                <li class="dropdown-item" value="2" style="cursor: default;">3</li>
+                            </ul>
+                        </div>
                     </div>
-                    <div class="col">
-                        <label>
-                            <select name="Классическая">
-                                <option value="std">Классическая</option>
-                                <option value="123">123</option>
-                            </select>
-                        </label>
+                    <div class="col position-relative">
+                        <div class="dropdown">
+                            <button value="1" type="button" class="dropdown-toggle" id="dropdownMenuButton2" data-bs-toggle="dropdown" aria-expanded="false">
+                                Классическая
+                            </button>
+                            <ul id="dropdownmenu2" class="dropdown-menu w-100" aria-labelledby="dropdownMenuButton2">
+                                <li class="dropdown-item" value="0" style="cursor: default;">Классическая</li>
+                                <li class="dropdown-item" value="1" style="cursor: default;">2</li>
+                                <li class="dropdown-item" value="2" style="cursor: default;">3</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
             <div class="text-black m-0 mt-4 mb-4" style="font-weight: bold;font-size: 22px;">Домен</div>
+            <!--input-->
             <div class="row w-100" style="height: 10%">
-                <div class="col-9 rounded-start-3 d-flex align-items-center" style="background: #E6E6E9"></div>
+                <div class="col-9 rounded-start-3 d-flex align-items-center position-relative" style="background: #E6E6E9">
+                    <div id="input-cover" class="position-absolute" style="pointer-events: none">Например: ivangrozniy</div>
+                    <input id="popup-input" class="w-100 border-0" value="" style="background: none">
+                </div>
                 <div class="col-3 rounded-end-3 text-white justify-content-center align-items-center d-flex" style="text-align: center;font-size: 16px;background: #6666CC">.work5.ru</div>
             </div>
             <div class="row w-100 mt-3" style="height: 20%">
@@ -288,10 +310,13 @@
                     </p>
                 </div>
             </div>
+            <!--bottom btn-->
             <div class="row text-white" style="height: 8%">
-                <div class="col-2 p-1 h-100 rounded-1 m-2 d-flex justify-content-center align-items-center" style="cursor: pointer;background: #B1B1B1">Отмена</div>
+                <div id="close-btn2" class="col-2 p-1 h-100 rounded-1 m-2 d-flex justify-content-center align-items-center" style="cursor: pointer;background: #B1B1B1">Отмена</div>
                 <div class="col-2 p-1 h-100 rounded-1 m-2 d-flex justify-content-center align-items-center" style="cursor: pointer;background: #55C97B;">Создать</div>
             </div>
         </div>
+        <script src="node_modules/jquery/dist/jquery.js"></script>
+        <script src="index.js"></script>
     </body>
 </html>
