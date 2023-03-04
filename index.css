@@ -61,6 +61,8 @@ input:focus-visible {
     width: 430px;
     height: 50px;
     margin-right: 1%;
+    right: 0;
+    top: 2%;
 }
 .header-btn {
     visibility: hidden;
@@ -89,6 +91,7 @@ input:focus-visible {
 .crumbs {
     visibility: visible;
 }
+/*popup*/
 .popup {
     width: 50%;
     z-index: 2;
@@ -96,6 +99,15 @@ input:focus-visible {
     top:20%;
     left: 25%;
     height: 60%
+}
+.dds {
+    height: 20%
+}
+.popup-input {
+    height: 10%
+}
+.bottom-btn {
+    height: 8%;
 }
 @media (max-width: 1410px) {
     .icon{
@@ -144,6 +156,7 @@ input:focus-visible {
     .header {
         visibility: hidden;
         width: 115px;
+        right: 40px;
     }
     .header-btn {
         visibility: visible;
@@ -171,5 +184,30 @@ input:focus-visible {
     }
     .action {
         width: 20%;
+    }
+    .popup {
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        padding: 0 20px;
+    }
+    .dds {
+        height: 10%;
+    }
+    .popup-input {
+        margin: auto;
+        height: 45px
+    }
+    .bottom-btn {
+        position: absolute;
+        width: 93%;
+        display: block;
+        bottom: 80px;
+        height: 45px;
+    }
+    .col-2 {
+        flex: 0 0 0;
+        width: 100%;
     }
 }
